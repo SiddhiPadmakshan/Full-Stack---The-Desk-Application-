@@ -70,6 +70,7 @@ public class Main {
                         if(expenses.isEmpty()){
                             System.out.println("Your expense list is empty. It cannot be sorted.");
                         }
+                        else{
                         int [] sortedExpenses = sortExpenses(expenses);
                         expenses.clear();
                         for(int i = 0; i < sortedExpenses.length; i++){
@@ -78,12 +79,15 @@ public class Main {
                         expenses.addAll(arrlist);
                         System.out.println("\n"+"Your saved expenses are sorted below: \n");
                         System.out.println(expenses+"\n");
+                    }
                         break;
                     case 5:
                     if(expenses.isEmpty()){
                         System.out.println("Your expense list is empty.");
                     }
+                    else{
                         searchExpenses(expenses);
+                    }
                         break;
                     case 6:
                         closeApp();
@@ -127,7 +131,7 @@ public class Main {
             }
             if(i == (arrayList.size() - 1) && response != arrayList.get(i)){
                 System.out.println("\nNo such expenditure is seen. Please try again with a different value.\n");
-                System.out.println(arrayList.get(i)); 
+                
             }   
         }
         
