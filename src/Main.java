@@ -134,9 +134,8 @@ public class Main {
                 
             }   
         }
-        sc.close();
-        
     }
+    
    
     private static int[] sortExpenses(ArrayList<Integer> arrayList) {
         int arrlength =  arrayList.size();
