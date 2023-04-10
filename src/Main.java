@@ -67,6 +67,9 @@ public class Main {
                         }
                         break;
                     case 4:
+                        if(expenses.isEmpty()){
+                            System.out.println("Your expense list is empty. It cannot be sorted.");
+                        }
                         int [] sortedExpenses = sortExpenses(expenses);
                         expenses.clear();
                         for(int i = 0; i < sortedExpenses.length; i++){
@@ -77,6 +80,9 @@ public class Main {
                         System.out.println(expenses+"\n");
                         break;
                     case 5:
+                    if(expenses.isEmpty()){
+                        System.out.println("Your expense list is empty.");
+                    }
                         searchExpenses(expenses);
                         break;
                     case 6:
