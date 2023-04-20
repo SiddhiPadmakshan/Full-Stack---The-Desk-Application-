@@ -9,7 +9,6 @@ public class Main {
         System.out.println("\tWelcome to TheDesk \n");
         System.out.println("**************************************");
         optionsSelection();
-
     }
     private static void optionsSelection() {
         String[] arr = {"1. I wish to review my expenditure",
@@ -21,7 +20,6 @@ public class Main {
         };
         int[] arr1 = {1,2,3,4,5,6};
         int  slen = arr1.length;
-        
         ArrayList<Integer> arrlist = new ArrayList<Integer>();
         ArrayList<Integer> expenses = new ArrayList<Integer>();
         expenses.add(1000);
@@ -32,9 +30,7 @@ public class Main {
         expenses.addAll(arrlist);
         System.out.println("\nEnter your choice:\t");
         Scanner sc = new Scanner(System.in);
-       
         boolean exit = false;
-
         while (!exit){
             for(int i=0; i<slen;i++){
                 System.out.println(arr[i]);
@@ -95,8 +91,7 @@ public class Main {
                     default:
                         System.out.println("You have made an invalid choice!\n");
                         break;
-                }
-            
+                } 
         }
         sc.close();
         
@@ -131,23 +126,19 @@ public class Main {
             }
             if(i == (arrayList.size() - 1) && response != arrayList.get(i)){
                 System.out.println("\nNo such expenditure is seen. Please try again with a different value.\n");
-                
             }   
         }
     }
-    
    
     private static int[] sortExpenses(ArrayList<Integer> arrayList) {
         int arrlength =  arrayList.size();
        //Complete the method. The expenses should be sorted in ascending order.
        int[] arr = new int[arrayList.size()];
-
        for (int i = 0; i < arrlength; i++){
         arr[i] = arrayList.get(i);
        }
         quickSort(arr, 0, arrlength - 1);
-        return arr;
-        
+        return arr;   
     }
     
     public static void quickSort(int[] arr, int left, int right) {
@@ -160,7 +151,6 @@ public class Main {
     private static int partition(int[] arr, int left, int right) {
 		int pivot = arr[left];
 		int storeIndex = left + 1;
-		
 		for ( int i = left + 1; i <= right ;i++) {
 			if ( arr[i] < pivot || arr[i] == pivot && Math.random() < 0.5) {
 				swap(arr,i,storeIndex);
@@ -169,7 +159,6 @@ public class Main {
 		}
 		swap ( arr, left, storeIndex -1 );
 		return storeIndex -1;
-		
 	}
     private static void swap(int[] arr, int i, int j) {
 		int temp = arr[i];
